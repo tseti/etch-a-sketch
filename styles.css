@@ -1,0 +1,27 @@
+:root {
+  --side-number: 64;
+}
+
+.container {
+  height: 500px;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.sketchpad {
+  border: 10px solid darkred;
+  box-sizing: border-box;
+  display: grid;
+  grid: repeat(var(--side-number), 1fr) / repeat(var(--side-number), 1fr);
+  height: 500px;
+  width: 500px;
+}
+
+.controls {
+  display: flex;
+  justify-content: right;
+}
+
+.color-cell:hover {
+  background-color: black;
+}
