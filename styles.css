@@ -2,6 +2,19 @@
   --side-number: 64;
 }
 
+.color {
+  border: 2px solid navy;
+  color: navy;
+}
+
+.clear {
+  align-self: flex-end;
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  
+}
+
 .container {
   height: 500px;
   margin: 0 auto;
@@ -13,8 +26,24 @@
   justify-content: space-between;
 }
 
-.intensity, .color {
+fieldset {
+  border-radius: 10px;
   display: inline-block;
+  margin: 10px 10px;
+  font-size: 20px;
+}
+
+.intensity {
+  border: 2px solid orangered;
+  color: orangered;
+}
+
+li {
+  color: #444;
+}
+
+input[type="radio"] {
+  outline: none;
 }
 
 .sketchpad {
