@@ -12,16 +12,6 @@ clearBtn.addEventListener('click', () => changeSize(prompt('Enter new size', 64)
 
 addDivsToContainer();
 
-function addDivsToContainer() {
-  for (let i = 0; i < gridSize**2; i++) {
-    let div = document.createElement('div');
-    div.classList.add(`cell${i}`);
-    div.classList.add('color-cell');
-    sketchpad.appendChild(div);
-    html.style.setProperty("--side-number", gridSize);
-  }
-}
-
 function changeSize(size) {
   gridSize = size;
   container.removeChild(sketchpad);
@@ -29,4 +19,21 @@ function changeSize(size) {
   sketchpad.classList.add('sketchpad');
   container.appendChild(sketchpad);
   addDivsToContainer();
+}
+
+
+function addDivsToContainer() {
+  for (let i = 0; i < gridSize**2; i++) {
+    let div = document.createElement('div');
+    div.classList.add(`cell${i}`);
+    div.classList.add('color-cell');
+    addListener(div);
+
+    sketchpad.appendChild(div);
+    html.style.setProperty("--side-number", gridSize);
+  }
+}
+
+function addListener(elem) {
+  elem.addEventListener('mouseover', (e) => e.target.classList.add('black-bg'));
 }
