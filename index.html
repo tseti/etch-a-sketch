@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,38 @@
   <link rel="stylesheet" type="text/css" media="screen" href="reset.css">
   <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <div class="controls">
+      <form action="" class="mutators-form">
+        <fieldset class="intensity">
+          <legend>Intensity</legend>
+          <ul>
+            <li>
+              <label for="intensity-10">10%</label>
+              <input id="intensity-10" type="radio" name="intensity" value="0.1">
+            </li>
+            <li>
+              <label for="intensity-100">100%</label>
+              <input id="intensity-100" type="radio" name="intensity" value="1" checked="checked">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="color">
+          <legend>Color</legend>
+          <ul>
+            <li>
+              <label for="color-black">Black</label>
+              <input id="color-black" type="radio" name="color" value="0" checked="checked">
+            </li>
+            <li>
+              <label for="color-random">Random</label>
+              <input id="color-random" type="radio" name="color" value="1">
+            </li>
+          </ul>
+        </fieldset>
+      </form>
       <button class="clear">
         Clear
       </button>
@@ -21,4 +51,5 @@
   </div>
   <script src="main.js"></script>
 </body>
+
 </html>

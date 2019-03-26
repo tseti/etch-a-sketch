@@ -8,6 +8,15 @@
   width: 500px;
 }
 
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intensity, .color {
+  display: inline-block;
+}
+
 .sketchpad {
   border: 10px solid darkred;
   box-sizing: border-box;
@@ -15,13 +24,4 @@
   grid: repeat(var(--side-number), 1fr) / repeat(var(--side-number), 1fr);
   height: 500px;
   width: 500px;
-}
-
-.controls {
-  display: flex;
-  justify-content: right;
-}
-
-.black-bg {
-  background-color: black;
 }
