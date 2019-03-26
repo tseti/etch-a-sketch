@@ -1,5 +1,23 @@
 :root {
   --side-number: 64;
+  --width: 500px;
+  --height: 500px;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --width: 100vw;
+    --height: 75vh;
+    --control-height: 25vh;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  :root {
+    --width: 75vw;
+    --height: 75vh;
+    --control-height: 25vh;
+  }
 }
 
 .color {
@@ -10,26 +28,29 @@
 .clear {
   align-self: flex-end;
   height: 50px;
-  margin-bottom: 10px;
   padding: 0 20px;
   
 }
 
 .container {
-  height: 500px;
+  height: var(--height);
   margin: 0 auto;
-  width: 500px;
+  width: var(--width);
 }
 
 .controls {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  max-height: var(--control-height);
+  max-width: var(--width);
+  margin: 10px 0;
 }
 
 fieldset {
   border-radius: 10px;
   display: inline-block;
-  margin: 10px 10px;
+  margin-right: 10px;
   font-size: 20px;
 }
 
@@ -39,7 +60,7 @@ fieldset {
 }
 
 li {
-  color: #444;
+  color: #333;
 }
 
 input[type="radio"] {
@@ -51,6 +72,6 @@ input[type="radio"] {
   box-sizing: border-box;
   display: grid;
   grid: repeat(var(--side-number), 1fr) / repeat(var(--side-number), 1fr);
-  height: 500px;
-  width: 500px;
+  min-width: var(--width);
+  min-height: var(--height);
 }
